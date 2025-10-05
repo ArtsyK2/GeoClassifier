@@ -2,6 +2,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 import gradio as gr
+'''
 from huggingface_hub import hf_hub_download
 
 model_path = hf_hub_download(
@@ -9,6 +10,9 @@ model_path = hf_hub_download(
     filename="GeoClaas_v01.keras"
 )
 model = load_model(model_path)
+'''
+
+model = load_model('GeoClaas_v01.keras')
 
 def classify_image(inp):
     inp = tf.image.resize(inp, (150, 150))  # resize
